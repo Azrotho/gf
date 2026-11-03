@@ -7,7 +7,7 @@ on:
     branches: [ master, develop ]
 
 env:
-  VCPKG_COMMIT: 6f29f12e82a8293156836ad81cc9bf5af41fe836
+  VCPKG_COMMIT: afa249f12f52ed8a3b919f195495ba8b330288d1
   VCPKG_DEFAULT_BINARY_CACHE: ${{ github.workspace }}\vcpkg\binary-cache
 
 jobs:
