@@ -64,7 +64,7 @@ jobs:
             libwayland-dev libxkbcommon-dev wayland-protocols \
 
       - name: Install gf dependencies
-        run: xmake config -vD --plat=${{ matrix.configurations.plat }} --arch=${{ matrix.configurations.arch }} --kind=${{ matrix.configurations.kind }} --mode=${{ matrix.configurations.mode }} --yes
+        run: xmake config --plat=${{ matrix.configurations.plat }} --arch=${{ matrix.configurations.arch }} --kind=${{ matrix.configurations.kind }} --mode=${{ matrix.configurations.mode }} --yes
 
       - name: Save cached xmake dependencies
         if: ${{ !steps.restore-cache.outputs.cache-hit }}
