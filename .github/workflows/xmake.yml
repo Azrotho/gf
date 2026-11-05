@@ -62,11 +62,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y \
             pkg-config \
-            libx11-dev libxext-dev libxrandr-dev libxcursor-dev \
-            libxi-dev libxinerama-dev libxxf86vm-dev libxss-dev \
+            libx11-dev \
             libgl1-mesa-dev libegl1-mesa-dev \
             libwayland-dev libxkbcommon-dev wayland-protocols \
-            libasound2-dev libpulse-dev libdbus-1-dev libudev-dev
 
       - name: Install gf dependencies
         run: xmake config -vD --plat=${{ matrix.configurations.plat }} --arch=${{ matrix.configurations.arch }} --kind=${{ matrix.configurations.kind }} --mode=${{ matrix.configurations.mode }} --yes
