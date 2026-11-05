@@ -56,7 +56,7 @@ jobs:
           path: ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
           key: ${{ matrix.configurations.plat }}-${{ matrix.configurations.arch }}-${{ matrix.configurations.kind }}-${{ matrix.configurations.mode }}-${{ steps.deps_hash.outputs.hash }}
 
-      - name: Install Linux dependencies for SDL2
+      - name: Install Wayland (linux) for SDL2
         if: matrix.configurations.plat == 'linux'
         run: |
           sudo apt-get update
